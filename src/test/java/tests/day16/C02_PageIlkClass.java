@@ -38,5 +38,6 @@ public class C02_PageIlkClass {
         //sonucun java icerdigini teset edelim
         String sonucYazisiStr=amazonPage.sonucYazisiElementi.getText();
         Assert.assertTrue(sonucYazisiStr.contains("java"));
+        Driver.closeDriver();
     }
 }
