@@ -1,5 +1,6 @@
 package tests.day17;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
@@ -22,6 +23,12 @@ public class C02_PropertiesIlkClass {
         //     test data password: manager1!
         hotelMyCampPage.passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
         hotelMyCampPage.loginButonu.click();
+        hotelMyCampPage.bekle(4);
         //     Degerleri girildiginde sayfaya girilmedigini test et.
+        Assert.assertTrue(hotelMyCampPage.basariliGirisYazisiElementi.isDisplayed());
+
+        Driver.closeDriver();
+
+
     }
 }

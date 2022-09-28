@@ -27,4 +27,14 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//div[@class='validation-summary-errors']")
     public WebElement girisYapilamadiYaziElementi;
 
-}
+    @FindBy(xpath = "//span[@class='caption-subject font-green-sharp bold uppercase']")
+    public WebElement basariliGirisYazisiElementi;
+
+    public void bekle(int saniye){
+     try {
+      Thread.sleep(saniye*1000);
+     } catch (InterruptedException e) {
+      e.printStackTrace();
+     }
+
+    }}
