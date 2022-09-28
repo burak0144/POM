@@ -14,9 +14,14 @@ public class C04_HotelMyCampPositiveLogin {
     //    login butonuna bas
         HotelMyCampPage hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.ilkLoginLinki.click();
-    //    test data username: manager ,
-    //            test data password : Manager1!
-    //            Degerleri girildiginde sayfaya basarili sekilde girilebildigini test et
-//
+        //   test data username: manager  ,
+        hotelMyCampPage.userNameBox.sendKeys("manager");
+
+        //   test data password: Manager1!
+        hotelMyCampPage.passwordBox.sendKeys("Manager1!");
+        hotelMyCampPage.loginButonu.click();
+
+        // Degerleri girdiginde sayfaya basarili bir sekilde girildigini test et.
+
     }
 }

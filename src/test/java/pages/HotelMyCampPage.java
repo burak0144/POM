@@ -15,4 +15,13 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//a[text()='Log in']")
     public WebElement ilkLoginLinki;
 
+    @FindBy(xpath = "//input[@id='UserName']")
+    public WebElement userNameBox;
+
+    @FindBy(xpath = "//input[@id='Password']")
+    public WebElement passwordBox;
+
+    @FindBy(xpath = "//input[@id='btnSubmit']")
+    public WebElement loginButonu;
+
 }
