@@ -1,5 +1,6 @@
 package tests.day16;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.Driver;
@@ -22,6 +23,8 @@ public class C04_HotelMyCampPositiveLogin {
         hotelMyCampPage.loginButonu.click();
 
         // Degerleri girdiginde sayfaya basarili bir sekilde girildigini test et.
+        String actualText=hotelMyCampPage.basariliGirisYazisiElementi.getText();
+        Assert.assertTrue(actualText.contains("LISTOFUSERS"));
 
     }
 }
