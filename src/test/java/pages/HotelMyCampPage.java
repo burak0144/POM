@@ -43,7 +43,7 @@ public class HotelMyCampPage {
     @FindBy(xpath = "(//input[@type='text'])[3]")
     public WebElement addHotelCodeKutusu;
 
-    @FindBy(xpath = "//select[@id='IDGroup']")
+    @FindBy(xpath = "//select[@id='IDGroup']" )
     public WebElement addHotelDropdown;
 
     @FindBy(xpath ="//button[@id='btnSubmit']" )
