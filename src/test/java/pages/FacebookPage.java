@@ -22,7 +22,11 @@ public class FacebookPage {
     public WebElement girilemediYazisiElementi;
 
 
-public void bekle (int saniye) throws InterruptedException {
-    Thread.sleep(saniye*1000);
-}
+    public void bekle (int saniye){
+        try {
+            Thread.sleep(saniye*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 }

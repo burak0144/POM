@@ -40,7 +40,7 @@ public class HotelMyCampPage {
     @FindBy(xpath = "//a[@class='btn btn-circle btn-default']")
     public WebElement addHotelLinki;
 
-    @FindBy(xpath = "(//input[@type='text'])[3]")
+    @FindBy(xpath = "(//input[@type='text'])[1]")
     public WebElement addHotelCodeKutusu;
 
     @FindBy(xpath = "//select[@id='IDGroup']" )
@@ -64,4 +64,6 @@ public class HotelMyCampPage {
      passwordBox.sendKeys(ConfigReader.getProperty("HMCValidPassword"));
      loginButonu.click();
   }
+
+
 }

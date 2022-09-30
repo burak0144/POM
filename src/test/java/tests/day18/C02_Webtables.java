@@ -21,15 +21,15 @@ public class C02_Webtables {
         hotelMyCampPage.girisYap();
     }
 
-    @Test
+    @Test(dependsOnMethods = "loginT")
     public void table() {
         //● table( ) metodu oluşturun
         //○ Tüm table body’sinin boyutunu(sutun sayisi) bulun. /tbody
         // header kisminda birinci satir ve altindaki datalari locate edelim
         //      //thead//tr[1]//th"
-        hotelMyCampPage=new HotelMyCampPage();
-        List<WebElement> headerDatList=hmcWebTablePage.headerBirinciSatirDatalar;
-        System.out.println("tablodaki sutun sayisi "+headerDatList.size());
+        hmcWebTablePage = new HMCWebTablePage();
+        List<WebElement> headerDataList = hmcWebTablePage.headerBirinciSatirDatalar;
+        System.out.println("tablodaki sutun sayisi " + headerDataList.size());
 
         //○ Table’daki tum body’I ve başlıkları(headers) konsolda yazdırın.
         //tbody
@@ -42,13 +42,25 @@ public class C02_Webtables {
 
         // eger her datayi ayri ayri almak istersek
         //    //tbody//td   sekline locate edip bir list'e atabiliriz.
-        List<WebElement>bodyTumDataList=hmcWebTablePage.tumBodyDatalariList;
-
+        List<WebElement> bodyTumDataList = hmcWebTablePage.tumBodyDatalariList;
         System.out.println(bodyTumDataList.size());
+    }
 
-        //● printRows( ) metodu oluşturun //tr
+    @Test(dependsOnMethods = "loginT" )
+    public void testName() {
+
+    //● printRows( ) metodu oluşturun //tr
+        hmcWebTablePage=new HMCWebTablePage();
+        System.out.println(hmcWebTablePage.satirlarListesi.size());
         //○ table body’sinde bulunan toplam satir(row) sayısını bulun.
         //○ Table body’sinde bulunan satirlari(rows) konsolda yazdırın.
+        List<WebElement>satirlarListesiWebElementi=hmcWebTablePage.satirlarListesi;
+        for (WebElement each:satirlarListesiWebElementi
+             ) {
+            System.out.println(each.getText());
+        }
+
         //○ 4.satirdaki(row) elementleri konsolda yazdırın
+        System.out.println("4.satir :"+satirlarListesiWebElementi.get(3).getText());
     }
 }
