@@ -6,11 +6,9 @@ import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
 import utilities.Driver;
 
-public class C02_WebtableDinamikLocate {
+public class C01_WebtableDinamikLocate {
     // 3 test methodu olusturalim
 
-
-    // 3. sutun numarasi verdigimde bana tum sutun'u yazdirsin
 
    HMCWebTablePage hmcWebTablePage;
    HotelMyCampPage hotelMyCampPage;
@@ -39,7 +37,20 @@ public class C02_WebtableDinamikLocate {
         // 2. satirin 4. datasi   //tbody//tr[2]//td[4]
         // 4.satirim  5.datasi    //tbody//tr[4]//td[5]
 
-        System.out.println("girdiginiz hucredeki element :"+hmcWebTablePage.hucreWebelementGetir(3, 5));
+        System.out.println("girdiginiz hucredeki element :"+hmcWebTablePage.hucreWebelementGetir(1, 3));
+        Driver.closeDriver();
+    }
+
+
+
+    @Test
+    public void sutunYazdirTesti() {
+        hotelMyCampPage=new HotelMyCampPage();
+        hotelMyCampPage.girisYap();
+        // 3. sutun numarasi verdigimde bana tum sutun'u yazdirsin
+        hmcWebTablePage=new HMCWebTablePage();
+        hmcWebTablePage.sutunYazdir(4);
+
         Driver.closeDriver();
     }
 }

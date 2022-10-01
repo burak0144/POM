@@ -45,4 +45,14 @@ public class HMCWebTablePage {
         String hucreDatasi=istenenHucreElementi.getText();
         return hucreDatasi;
     }
+
+    public void sutunYazdir(int sutun) {
+        //her bir satirdaki istenen sutun elementini yazdirabilmek icin once satir sayisini bilmeye ihtiyacim var
+
+        int satirSayisi=satirlarListesi.size();
+
+        for (int i = 1; i <=satirSayisi ; i++) {
+            System.out.println(hucreWebelementGetir(i, sutun));
+        }
+    }
 }

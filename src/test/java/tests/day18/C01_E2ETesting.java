@@ -1,9 +1,11 @@
 package tests.day18;
 
 import com.github.javafaker.Faker;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.Driver;
@@ -45,7 +47,13 @@ public class C01_E2ETesting {
         select.selectByVisibleText("Hotel Type2");
 
         //8. Save butonuna tıklayın.
+        JavascriptExecutor jse= (JavascriptExecutor) Driver.getDriver();
+        jse.executeScript("arguments[0].scrollIntoView(true);",hotelMyCampPage.addHotelSaveButonu);
+        hotelMyCampPage.addHotelSaveButonu.click();
         //9. “Hotel was inserted successfully” textinin göründüğünü test edin.
+        hotelMyCampPage.bekle(3);
+        Assert.assertTrue(hotelMyCampPage.basariliEklendi.isDisplayed());
         //10. OK butonuna tıklayın.
+        hotelMyCampPage.lastButtonOK.click();
     }
 }

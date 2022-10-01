@@ -49,6 +49,12 @@ public class HotelMyCampPage {
     @FindBy(xpath ="//button[@id='btnSubmit']" )
     public WebElement addHotelSaveButonu;
 
+    @FindBy(xpath = "//div[@class='bootbox-body']")
+    public WebElement basariliEklendi;
+
+    @FindBy(xpath = "(//button[@type='button'])[6]")
+    public WebElement lastButtonOK;
+
     public void bekle(int saniye){
      try {
       Thread.sleep(saniye*1000);
