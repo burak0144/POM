@@ -6,7 +6,7 @@ import utilities.ConfigReader;
 import utilities.Driver;
 
 public class C02_WebTableDemoqa {
-    @Test
+    @Test(groups = {"smoke", "regression"})
     public void demoqaTest() {
 
     //Bir Class olusturun D19_WebtablesHomework
