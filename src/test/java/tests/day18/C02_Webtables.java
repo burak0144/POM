@@ -4,6 +4,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import pages.HMCWebTablePage;
 import pages.HotelMyCampPage;
+import utilities.Driver;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class C02_Webtables {
         //○ Password : Manager1!
         hotelMyCampPage=new HotelMyCampPage();
         hotelMyCampPage.girisYap();
+
     }
 
     @Test(dependsOnMethods = "loginT")
@@ -44,10 +46,11 @@ public class C02_Webtables {
         //    //tbody//td   sekline locate edip bir list'e atabiliriz.
         List<WebElement> bodyTumDataList = hmcWebTablePage.tumBodyDatalariList;
         System.out.println(bodyTumDataList.size());
+        Driver.getDriver().close();
     }
 
     @Test(dependsOnMethods = "loginT" )
-    public void testName() {
+    public void printRows() {
 
     //● printRows( ) metodu oluşturun //tr
         hmcWebTablePage=new HMCWebTablePage();
@@ -62,5 +65,6 @@ public class C02_Webtables {
 
         //○ 4.satirdaki(row) elementleri konsolda yazdırın
         System.out.println("4.satir :"+satirlarListesiWebElementi.get(3).getText());
+        Driver.getDriver().close();
     }
 }
