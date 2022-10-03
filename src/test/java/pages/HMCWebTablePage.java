@@ -18,7 +18,7 @@ public class HMCWebTablePage {
     public List<WebElement> headerBirinciSatirDatalar;
 
     @FindBy(xpath = "//table")
-    public WebElement tumBodyWebElementi;
+    public WebElement tumBodyWebhElementi;
 
     @FindBy(xpath = "//tbody//td")
     public List<WebElement> tumBodyDatalariList;

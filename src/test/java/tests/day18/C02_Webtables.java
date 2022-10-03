@@ -32,8 +32,8 @@ public class C02_Webtables {
         System.out.println("tablodaki sutun sayisi " + headerDataList.size());
 
         //○ Table’daki tum body’I ve başlıkları(headers) konsolda yazdırın.
-        //tbody
-        System.out.println(hmcWebTablePage.tumBodyWebElementi.getText());
+        //table
+        System.out.println(hmcWebTablePage.tumBodyWebhElementi.getText());
         // eger body'i tek bir webelement olarak locate edersek
         // icindeki tum datalari gettext() ile yazdirabiliriz
         // ancak bu durumda bu elementler ayri ayri degil body'nin icindeki tek bir String'in parcalari olurlar

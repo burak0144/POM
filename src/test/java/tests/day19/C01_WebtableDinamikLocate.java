@@ -37,7 +37,7 @@ public class C01_WebtableDinamikLocate {
         // 2. satirin 4. datasi   //tbody//tr[2]//td[4]
         // 4.satirim  5.datasi    //tbody//tr[4]//td[5]
 
-        System.out.println("girdiginiz hucredeki element :"+hmcWebTablePage.hucreWebelementGetir(1, 3));
+        System.out.println("girdiginiz hucredeki element :"+hmcWebTablePage.hucreWebelementGetir(2, 4));
         Driver.closeDriver();
     }
 
