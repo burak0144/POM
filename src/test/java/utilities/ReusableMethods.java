@@ -17,7 +17,7 @@ import java.time.Duration;
 import java.util.*;
 import java.util.function.Function;
     public class ReusableMethods {
-
+      //===================dosya yolu sayfa ismi satir hucre girince datayi verir
         // Bir method olusturalim
         // dosya yolu, sayfa ismi ve satir , hucre indexini verince hucre bilgisini dondursun.
         public static Cell hucreGetir(String path,String sayfaIsmi, int satirIndex, int hucreIndex){

@@ -21,6 +21,7 @@ public class C05_ExcelMapLoad {
         Map<String,String> ulkelerMap= ReusableMethods.mapOlustur(path,sayfaAdi);
         System.out.println(ulkelerMap.get("Turkey"));
 
+
         // Listede Netherlands oldugunu test edin
         Assert.assertTrue(ulkelerMap.containsKey("Netherlands"));
     }
