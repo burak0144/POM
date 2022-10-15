@@ -5,6 +5,7 @@ import org.testng.annotations.Test;
 import pages.HotelMyCampPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ReusableMethods;
 
 public class NegativeLoginTest {
     //1) smokeTest paketi altinda yeni bir Class olustur: NegativeTest
