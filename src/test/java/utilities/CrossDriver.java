@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.safari.SafariDriver;
 
 import java.time.Duration;
@@ -28,7 +29,14 @@ public class CrossDriver {
                 //buraya parametre olarak girdigimiz degeri yazdik
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--remote-allow-origins=*");
+                    DesiredCapabilities cp= new DesiredCapabilities();
+                    cp.setCapability(ChromeOptions.CAPABILITY, options);
+                    options.merge(cp);
+
+                    driver = new ChromeDriver(options);
                     break;
                 case "edge":
                     WebDriverManager.edgedriver().setup();
